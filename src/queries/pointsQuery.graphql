@@ -1,0 +1,6 @@
+query PointsQuery {
+  points {
+    gid
+    geom
+  }
+}

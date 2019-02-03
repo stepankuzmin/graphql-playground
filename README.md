@@ -15,23 +15,8 @@ docker run -p 8080:8080 \
   hasura/graphql-engine:latest
 ```
 
-## Exporting the GraphQL schema
+## Generate typings and Appolo components
 
 ```shell
-yarn run apollo schema:download \
-  --endpoint=http://localhost:8080/v1alpha1/graphql \
-  schema.json
-```
-
-## Generate TypeScript typings
-
-```shell
-yarn run apollo codegen:generate \
-  --localSchemaFile=schema.json \
-  --target=typescript \
-  --includes=src/**/*.ts \
-  --tagName=gql \
-  --addTypename \
-  --globalTypesFile=src/types/graphql-global-types.ts \
-  types
+yarn generate
 ```
